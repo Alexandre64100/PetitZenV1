@@ -10,11 +10,9 @@ export default function Home() {
   const handleSendMessage = () => {
     if (!inputMessage.trim()) return;
     
-    // Ajouter message utilisateur
     const newMessage = { id: messages.length + 1, type: 'user', text: inputMessage };
     setMessages([...messages, newMessage]);
     
-    // Réponse automatique d'Alex
     setTimeout(() => {
       const botResponse = { 
         id: messages.length + 2, 
@@ -35,20 +33,30 @@ export default function Home() {
         </div>
       </div>
       <div className="hero">
-        <img src="/logo-petitzen.png" alt="PetitZen Logo" style={{width: '150px', marginBottom: '2rem'}} />
+        <div className="logo">🧘</div>
         <h1>PetitZen.tech</h1>
         <p className="tagline">Votre assistant administratif intelligent</p>
         <p style={{color: '#666', marginBottom: '2rem'}}>SaaS pour auto-entrepreneurs</p>
-        <button className="button" onClick={() => setShowChat(!showChat)}>
-          {showChat ? 'Fermer le chat' : 'Parler à Alex 💬'}
-        </button>
+        <button className="button">Commencer gratuitement</button>
       </div>
       
+      {/* Bouton chat flottant */}
+      {!showChat && (
+        <button 
+          className="chat-button-floating" 
+          onClick={() => setShowChat(true)}
+          aria-label="Ouvrir le chat"
+        >
+          💬
+        </button>
+      )}
+      
+      {/* Container du chat */}
       {showChat && (
         <div className="chat-container">
           <div className="chat-header">
             <h3>💬 Chat avec Alex</h3>
-            <button onClick={() => setShowChat(false)} style={{background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer'}}>×</button>
+            <button onClick={() => setShowChat(false)} style={{background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer', color: 'white'}}>×</button>
           </div>
           <div className="chat-messages">
             {messages.map(msg => (
