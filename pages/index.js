@@ -33,7 +33,7 @@ export default function Home() {
         </div>
       </div>
       <div className="hero">
-        <div className="logo">🧘</div>
+        <div className="logo">💰</div>
         <h1>PetitZen.tech</h1>
         <p className="tagline">Votre assistant administratif intelligent</p>
         <p style={{color: '#666', marginBottom: '2rem'}}>SaaS pour auto-entrepreneurs</p>
