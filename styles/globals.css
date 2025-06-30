@@ -156,3 +156,115 @@ footer {
 .kanban-card.success { /* For the "Payés" cards */
   border-left-color: #4CAF50;
 }
+
+/* Styles spécifiques à la section ChatBot */
+.chatbot-section {
+  padding: 4rem 2rem;
+  background-color: #eef3f7; /* Fond légèrement différent */
+  margin-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.chatbot-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.chatbot-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.chat-window {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 500px; /* Hauteur fixe pour la fenêtre de chat */
+  overflow: hidden;
+}
+
+.messages-display {
+  flex-grow: 1;
+  padding: 1.5rem;
+  overflow-y: auto; /* Permet le défilement si beaucoup de messages */
+  background-color: #f7f9fc;
+  border-bottom: 1px solid #eee;
+}
+
+.message {
+  margin-bottom: 0.8rem;
+  padding: 0.7rem 1rem;
+  border-radius: 18px;
+  max-width: 75%;
+  word-wrap: break-word; /* Casse les mots longs */
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.message.user {
+  background-color: #007bff;
+  color: white;
+  margin-left: auto; /* Aligne le message de l'utilisateur à droite */
+  border-bottom-right-radius: 4px;
+}
+
+.message.bot {
+  background-color: #e2e6ea;
+  color: #333;
+  margin-right: auto; /* Aligne le message du bot à gauche */
+  border-bottom-left-radius: 4px;
+}
+
+.message.bot.initial {
+    font-style: italic;
+    color: #777;
+    background-color: transparent;
+    text-align: center;
+    margin: 1rem auto;
+    max-width: 100%;
+}
+
+
+.input-area {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+  background-color: #fff;
+}
+
+.input-area input {
+  flex-grow: 1;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 1rem;
+  margin-right: 0.8rem;
+  outline: none;
+}
+
+.input-area input:focus {
+  border-color: #007bff;
+}
+
+.input-area button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.input-area button:hover {
+  background-color: #0056b3;
+}
