@@ -66,7 +66,7 @@ export default function ChatBot() {
                     handleSendMessage();
                   }
                 }}
-                placeholder="Tape ton message ici..." {/* Changé pour être en tutoiement */}
+              placeholder="Tape ton message ici..."
               />
               <button onClick={handleSendMessage}>Envoyer</button>
             </div>
