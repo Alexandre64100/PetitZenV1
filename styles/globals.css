@@ -268,3 +268,50 @@ footer {
 .input-area button:hover {
   background-color: #0056b3;
 }
+
+/* Ajustements pour positionner le ChatBot flottant en bas à droite */
+.chatbot-section {
+  position: fixed; /* Rend le chatbot flottant par rapport à la fenêtre de navigation */
+  bottom: 20px;    /* Distance du bas de la fenêtre */
+  right: 20px;     /* Distance de la droite de la fenêtre */
+  width: 350px;    /* Largeur fixe du chatbot pour qu'il soit compact */
+  height: 450px;   /* Hauteur fixe du chatbot */
+  z-index: 1000;   /* Assure que le chatbot est au-dessus des autres éléments */
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15); /* Ombre pour le faire ressortir */
+  border-radius: 12px; /* Coins arrondis pour un look moderne */
+  overflow: hidden; /* Cache tout ce qui dépasse des bords */
+  background-color: #ffffff; /* S'assurer d'un fond blanc */
+  border: 1px solid #e0e0e0; /* Petite bordure */
+  padding: 0; /* Pas de padding pour cette section globale */
+  margin: 0; /* Pas de margin pour cette section globale */
+  display: flex; /* Utiliser flexbox pour le contenu interne */
+  flex-direction: column; /* Organiser le contenu en colonne */
+}
+
+/* Ajustement de la fenêtre de chat interne pour qu'elle prenne toute la hauteur disponible */
+.chatbot-section .chat-window {
+    height: 100%;
+    width: 100%;
+    max-width: none; /* Supprimer la contrainte de max-width */
+    margin: 0;
+    box-shadow: none; /* Supprimer l'ombre interne si elle est déjà sur la section */
+    border-radius: 0; /* Supprimer les coins arrondis internes si déjà sur la section */
+    border: none; /* Supprimer la bordure interne */
+}
+
+/* Style pour le header du chatbot (titre, icône) */
+.chatbot-section h2 {
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  background-color: #007bff; /* Couleur d'en-tête */
+  color: white;
+  border-top-left-radius: 10px; /* Coins arrondis pour l'en-tête */
+  border-top-right-radius: 10px;
+  cursor: pointer; /* Indique qu'on peut cliquer pour ouvrir/fermer par exemple */
+}
+
+.chatbot-section .chatbot-subtitle {
+    display: none; /* Le sous-titre est souvent inutile pour un bot flottant */
+}
