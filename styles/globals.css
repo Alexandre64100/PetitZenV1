@@ -315,3 +315,174 @@ footer {
 .chatbot-section .chatbot-subtitle {
     display: none; /* Le sous-titre est souvent inutile pour un bot flottant */
 }
+
+/* Styles pour le bouton flottant qui ouvre/ferme le chat */
+.chatbot-toggle-button {
+  position: fixed;
+  bottom: 30px; /* Un peu plus haut que le bord pour laisser de la place */
+  right: 30px; /* Un peu plus à gauche que le bord */
+  background-color: #007bff; /* Couleur bleue */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Pour un bouton rond */
+  width: 60px; /* Taille du bouton */
+  height: 60px;
+  font-size: 2rem; /* Taille de l'icône/texte */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Ombre pour qu'il ressorte */
+  z-index: 1001; /* Doit être au-dessus du chat lui-même */
+  transition: transform 0.2s ease-in-out; /* Animation au survol */
+}
+
+.chatbot-toggle-button:hover {
+  transform: scale(1.05); /* Zoom léger au survol */
+}
+
+/* Styles pour la fenêtre du ChatBot flottante */
+.chatbot-section {
+  position: fixed;
+  bottom: 100px;    /* Position au-dessus du bouton */
+  right: 30px;     /* Aligné avec le bouton */
+  width: 350px;    /* Largeur fixe */
+  height: 450px;   /* Hauteur fixe */
+  z-index: 1000;   /* En dessous du bouton de toggle */
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  transform-origin: bottom right; /* Point de pivot pour l'animation */
+  animation: fadeInScaleUp 0.3s ease-out forwards; /* Animation d'apparition */
+}
+
+/* Animation d'apparition */
+@keyframes fadeInScaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* En-tête du ChatBot */
+.chatbot-section .chatbot-header-draggable {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: pointer; /* Indique qu'on peut cliquer pour fermer */
+  flex-shrink: 0; /* Empêche le header de rétrécir */
+}
+
+.chatbot-section h2 {
+    margin: 0; /* Supprime la marge par défaut du h2 */
+}
+
+/* Suppression du sous-titre qui n'est plus pertinent */
+.chatbot-section .chatbot-subtitle {
+    display: none;
+}
+
+/* Ajustement de la fenêtre de chat interne */
+.chatbot-section .chat-window {
+    flex-grow: 1; /* Prend l'espace restant */
+    display: flex;
+    flex-direction: column;
+    padding: 0; /* Le padding est dans messages-display et input-area */
+    background-color: #f7f9fc;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    max-width: none;
+    height: auto; /* La hauteur est gérée par la section parent */
+}
+
+.chatbot-section .messages-display {
+  flex-grow: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  background-color: #f7f9fc;
+  border-bottom: 1px solid #eee;
+}
+
+.message {
+  margin-bottom: 0.8rem;
+  padding: 0.7rem 1rem;
+  border-radius: 18px;
+  max-width: 75%;
+  word-wrap: break-word;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.message.user {
+  background-color: #007bff;
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+.message.bot {
+  background-color: #e2e6ea;
+  color: #333;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+}
+
+.message.bot.initial {
+    font-style: italic;
+    color: #777;
+    background-color: transparent;
+    text-align: center;
+    margin: 1rem auto;
+    max-width: 100%;
+}
+
+
+.input-area {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+  background-color: #fff;
+  flex-shrink: 0; /* Empêche l'input-area de rétrécir */
+}
+
+.input-area input {
+  flex-grow: 1;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 1rem;
+  margin-right: 0.8rem;
+  outline: none;
+}
+
+.input-area input:focus {
+  border-color: #007bff;
+}
+
+.input-area button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.input-area button:hover {
+  background-color: #0056b3;
+}
