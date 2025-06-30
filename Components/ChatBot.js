@@ -17,7 +17,7 @@ export default function ChatBot() {
 
       // Simulation d'une réponse simple du bot pour l'instant
       setTimeout(() => {
-        setMessages(prevMessages => [...prevMessages, { text: "Bonjour ! Je suis Alex, votre assistant. Comment puis-je vous aider ?", sender: 'bot' }]);
+        setMessages(prevMessages => [...prevMessages, { text: "Bonjour ! Je suis ton votre assistant. Comment puis-je t'aider maintenant ?", sender: 'bot' }]);
       }, 1000);
     }
   };
@@ -41,7 +41,7 @@ export default function ChatBot() {
             <h2>Chat Bot ZEN+ 🤖</h2> {/* NOUVEAU NOM */}
           </div>
           {/* Le sous-titre est retiré pour un bot flottant plus compact */}
-          {/* <p className="chatbot-subtitle">Posez vos questions sur vos documents ou l'administration !</p> */}
+          {/* <p className="chatbot-subtitle">Pose tes questions sur tes documents ou l'administration ou toutes autres renseignements que tu souhaites? Je ferai mon possible pour te donner satisfaction!</p> */}
 
           <div className="chat-window">
             <div className="messages-display">
@@ -52,7 +52,7 @@ export default function ChatBot() {
               ))}
               {messages.length === 0 && (
                   <div className="message bot initial">
-                      Bonjour ! Je suis Alex, votre assistant virtuel. N'hésitez pas si vous avez des questions.
+                      Bonjour ! Je suis Alex, ton assistant Zen+ . N'hésite pas à poser des questions.
                   </div>
               )}
             </div>
