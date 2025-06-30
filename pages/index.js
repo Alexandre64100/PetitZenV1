@@ -11,8 +11,8 @@ export default function Home() {
 
       {/* Section principale avec le Hello World */}
       <main>
-        <h1>Hello PetitZen V2 ! 💰 </h1>
-        <p>Bienvenue sur votre application de gestion de documents.</p>
+       <h1>Bonjour PetitZen V2 ! 💰</h1>
+<p>Bienvenue dans votre espace administratif !</p>
       </main>
 
       {/* Nouvelle Section Kanban que tu as fournie */}
