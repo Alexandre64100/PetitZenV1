@@ -11,7 +11,7 @@ export default function Home() {
 
       {/* Section principale avec le Hello World */}
       <main>
-       <h1>Bonjour PetitZen V2 ! 💰</h1>
+       <h1>Bonjour bienvenue chez vous ! 💰</h1>
 <p>Bienvenue dans votre espace administratif !</p>
       </main>
 
