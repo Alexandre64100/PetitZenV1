@@ -11,8 +11,8 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  /* Fond dégradé de haut en bas, du blanc (#FFFFFF) vers le bleu très clair (#E0FFFF) */
-  background: linear-gradient(to bottom, #FFFFFF 0%, #E0FFFF 100%); 
+  /* Fond dégradé du blanc vers le BLEU CIEL (#87CEEB) */
+  background: linear-gradient(to bottom, #FFFFFF 0%, #87CEEB 100%); 
   min-height: 100vh;
   color: #333; /* Couleur de texte par défaut */
 }
@@ -167,7 +167,7 @@ footer {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #00BFFF; /* Bleu vif pour le bouton */
+  background-color: #87CEEB; /* BLEU CIEL */
   color: white;
   border: none;
   border-radius: 50%;
@@ -185,7 +185,7 @@ footer {
 
 .chatbot-toggle-button:hover {
   transform: scale(1.05);
-  background-color: #0099CC; /* Nuance légèrement plus foncée pour le hover */
+  background-color: #64B8D9; /* Nuance légèrement plus foncée pour le hover de #87CEEB */
 }
 
 /* Styles pour la fenêtre du ChatBot flottante */
@@ -224,7 +224,7 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 1.5rem;
-  background-color: #00BFFF; /* Bleu vif pour l'en-tête */
+  background-color: #87CEEB; /* BLEU CIEL */
   color: white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -274,7 +274,7 @@ footer {
 }
 
 .message.user {
-  background-color: #00BFFF; /* Bleu vif pour les messages utilisateur */
+  background-color: #87CEEB; /* BLEU CIEL */
   color: white;
   margin-left: auto;
   border-bottom-right-radius: 4px;
@@ -316,11 +316,11 @@ footer {
 }
 
 .input-area input:focus {
-  border-color: #00BFFF; /* Bleu vif pour le focus de l'input */
+  border-color: #87CEEB; /* BLEU CIEL */
 }
 
 .input-area button {
-  background-color: #00BFFF; /* Bleu vif pour le bouton d'envoi */
+  background-color: #87CEEB; /* BLEU CIEL */
   color: white;
   border: none;
   padding: 0.8rem 1.5rem;
@@ -331,5 +331,5 @@ footer {
 }
 
 .input-area button:hover {
-  background-color: #0099CC; /* Nuance légèrement plus foncée pour le hover */
+  background-color: #64B8D9; /* Nuance légèrement plus foncée pour le hover */
 }
