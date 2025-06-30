@@ -52,7 +52,7 @@ export default function ChatBot() {
               ))}
               {messages.length === 0 && (
                   <div className="message bot initial">
-                      Bonjour ! Je suis Alex, ton assistant Zen+ . N'hésite pas à poser des questions.
+                      Bonjour ! Je suis Alex, ton assistant personnel. N'hésite pas à poser des questions.
                   </div>
               )}
             </div>
