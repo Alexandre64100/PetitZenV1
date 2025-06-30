@@ -1,7 +1,5 @@
-import ChatBot from '../components/ChatBot';
-
 import Head from 'next/head';
-
+import ChatBot from '../components/ChatBot';
 export default function Home() {
   return (
     <div>
@@ -19,6 +17,22 @@ export default function Home() {
 
       {/* Nouvelle Section Kanban que tu as fournie */}
       <section className="kanban-section">
+        // ... (code précédent, y compris la section <main>) ...
+
+      {/* Nouvelle Section Kanban que tu as fournie */}
+      <section className="kanban-section">
+        {/* ... TOUT LE CODE DE TA SECTION KANBAN EST ICI ... */}
+      </section>
+
+      {/* C'EST ICI QU'ON AFFICHE LE CHAT BOT ! */}
+      <ChatBot /> {/* <-- Copie-colle cette ligne EXACTEMENT ici ! */}
+
+      <footer>
+        <p>© 2025 PetitZen V2</p>
+      </footer>
+    </div>
+  );
+}
         <div className="container">
           <h2>Gérez vos documents comme un pro ! 📊</h2>
           <p className="kanban-subtitle">Visualisez l'état de vos factures et documents en temps réel</p>
