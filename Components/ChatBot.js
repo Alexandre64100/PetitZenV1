@@ -5,7 +5,7 @@ export default function ChatBot() {
   const [messages, setMessages] = useState([]);
   // État pour le texte entré par l'utilisateur
   const [input, setInput] = useState('');
-  // NOUVEAU : État pour gérer la visibilité du chat (true = visible, false = caché)
+  // État pour gérer la visibilité du chat (true = visible, false = caché)
   const [showChat, setShowChat] = useState(false); // Le chat est caché par défaut
 
   // Fonction pour envoyer un message
@@ -17,12 +17,13 @@ export default function ChatBot() {
 
       // Simulation d'une réponse simple du bot pour l'instant
       setTimeout(() => {
-        setMessages(prevMessages => [...prevMessages, { text: "Bonjour ! Je suis ton votre assistant. Comment puis-je t'aider maintenant ?", sender: 'bot' }]);
+        // Message du bot après le premier envoi : tout en tutoiement
+        setMessages(prevMessages => [...prevMessages, { text: "Bonjour ! Je suis ton assistant. Comment puis-je t'aider maintenant ?", sender: 'bot' }]);
       }, 1000);
     }
   };
 
-  // NOUVEAU : Fonction pour basculer la visibilité du chat
+  // Fonction pour basculer la visibilité du chat
   const toggleChat = () => {
     setShowChat(!showChat); // Inverse l'état actuel (visible devient caché, caché devient visible)
   };
@@ -37,11 +38,9 @@ export default function ChatBot() {
       {/* Fenêtre du Chat Bot - visible uniquement si showChat est vrai */}
       {showChat && (
         <section className="chatbot-section">
-          <div className="chatbot-header-draggable" onClick={toggleChat}> {/* Cliquable pour fermer */}
-            <h2>Chat Bot ZEN+ 🤖</h2> {/* NOUVEAU NOM */}
+          <div className="chatbot-header-draggable" onClick={toggleChat}>
+            <h2>Chat Bot ZEN+ 🤖</h2>
           </div>
-          {/* Le sous-titre est retiré pour un bot flottant plus compact */}
-          {/* <p className="chatbot-subtitle">Pose tes questions sur tes documents ou l'administration ou toutes autres renseignements que tu souhaites? Je ferai mon possible pour te donner satisfaction!</p> */}
 
           <div className="chat-window">
             <div className="messages-display">
@@ -52,6 +51,7 @@ export default function ChatBot() {
               ))}
               {messages.length === 0 && (
                   <div className="message bot initial">
+                      {/* Message initial du bot : tout en tutoiement */}
                       Bonjour ! Je suis Alex, ton assistant personnel. N'hésite pas à poser des questions.
                   </div>
               )}
@@ -66,7 +66,7 @@ export default function ChatBot() {
                     handleSendMessage();
                   }
                 }}
-                placeholder="Tapez votre message ici..."
+                placeholder="Tape ton message ici..." {/* Changé pour être en tutoiement */}
               />
               <button onClick={handleSendMessage}>Envoyer</button>
             </div>
