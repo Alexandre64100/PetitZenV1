@@ -11,17 +11,17 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  /* Fond dégradé de haut en bas, du blanc vers le bleu très clair (#E0FFFF) */
-  background: linear-gradient(to bottom, #FFFFFF 0%, #E0FFFF 100%); /* Blanc pur vers le bleu très clair */
+  /* Fond dégradé de haut en bas, du blanc (#FFFFFF) vers le bleu très clair (#E0FFFF) */
+  background: linear-gradient(to bottom, #FFFFFF 0%, #E0FFFF 100%); 
   min-height: 100vh;
   color: #333; /* Couleur de texte par défaut */
 }
 
 /* Styles pour la structure de page (header, main, footer) */
 main {
-  padding: 4rem 2rem; /* Espace autour du contenu principal */
-  max-width: 1200px; /* Limite la largeur du contenu */
-  margin: 0 auto; /* Centre le contenu */
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -49,14 +49,14 @@ footer {
 /* Styles spécifiques à la section Kanban */
 .kanban-section {
   padding: 4rem 2rem;
-  background-color: #f8faff; /* Conserve un fond clair pour cette section */
-  margin-top: 2rem; /* Espace au-dessus de la section Kanban */
+  background-color: #f8faff;
+  margin-top: 2rem;
 }
 
 .kanban-section .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0; /* Pas de padding supplémentaire ici, déjà géré par main */
+  padding: 0;
 }
 
 .kanban-section h2 {
@@ -78,13 +78,13 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   padding: 20px;
-  background-color: #f0f3f7; /* Conserve un fond légèrement grisé pour le tableau */
+  background-color: #f0f3f7;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .kanban-column {
-  background-color: #ffffff; /* Conserve un fond blanc pour les colonnes */
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   overflow: hidden;
