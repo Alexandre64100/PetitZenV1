@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Ton code CSS existant commence après ces 3 lignes */
-
 * {
   margin: 0;
   padding: 0;
