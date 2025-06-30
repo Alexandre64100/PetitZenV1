@@ -49,7 +49,7 @@ footer {
 /* Styles spécifiques à la section Kanban */
 .kanban-section {
   padding: 4rem 2rem;
-  background-color: #f8faff;
+  background-color: #E0FFFF;
   margin-top: 2rem;
 }
 
@@ -78,7 +78,7 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   padding: 20px;
-  background-color: #f0f3f7;
+  background-color: #E0FFFF;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
@@ -128,7 +128,7 @@ footer {
 }
 
 .kanban-card {
-  background-color: #fdfdfd;
+  background-color: #E0FFFF;
   padding: 1rem;
   margin: 10px;
   border-radius: 6px;
