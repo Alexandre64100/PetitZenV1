@@ -35,7 +35,7 @@ export default function Home() {
       <div className="hero">
         <div className="logo">💰</div>
         <h1>PetitZen.tech</h1>
-        <p className="tagline">Votre assistant administratif commercial intelligent</p>
+        <p className="tagline">Votre assistant administratif et commercial intelligent</p>
         <p style={{color: '#666', marginBottom: '2rem'}}>SaaS pour auto-entrepreneurs</p>
         <button className="button">Commencer gratuitement</button>
       </div>
