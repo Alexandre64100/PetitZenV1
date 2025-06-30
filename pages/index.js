@@ -1,83 +1,62 @@
-import { useState } from 'react';
-
-export default function Home() {
-  const [showChat, setShowChat] = useState(false);
-  const [messages, setMessages] = useState([
-    { id: 1, type: 'bot', text: "Salut ! Je suis Alex, créateur de PetitZen ! 👋 Comment puis-je t'aider ?" }
-  ]);
-  const [inputMessage, setInputMessage] = useState('');
-
-  const handleSendMessage = () => {
-    if (!inputMessage.trim()) return;
+{/* Section Kanban */}
+<div className="kanban-section">
+  <div className="container">
+    <h2>Gérez vos documents comme un pro ! 📊</h2>
+    <p className="kanban-subtitle">Visualisez l'état de vos factures et documents en temps réel</p>
     
-    const newMessage = { id: messages.length + 1, type: 'user', text: inputMessage };
-    setMessages([...messages, newMessage]);
-    
-    setTimeout(() => {
-      const botResponse = { 
-        id: messages.length + 2, 
-        type: 'bot', 
-        text: "Super question ! PetitZen va révolutionner ta gestion admin. Inscris-toi à la beta gratuite !" 
-      };
-      setMessages(prev => [...prev, botResponse]);
-    }, 1000);
-    
-    setInputMessage('');
-  };
-
-  return (
-    <>
-      <div className="header">
-        <div className="container">
-          <h2>🧘 PetitZen</h2>
+    <div className="kanban-board">
+      <div className="kanban-column">
+        <div className="kanban-header new">
+          <h3>📥 Nouveaux</h3>
+          <span className="count">3</span>
+        </div>
+        <div className="kanban-card">
+          <h4>Facture Dupont</h4>
+          <p>450€ - Peinture salon</p>
+          <span className="date">Aujourd'hui</span>
+        </div>
+        <div className="kanban-card">
+          <h4>Devis Martin</h4>
+          <p>780€ - Rénovation cuisine</p>
+          <span className="date">Hier</span>
         </div>
       </div>
-      <div className="hero">
-        <div className="logo">💰</div>
-        <h1>PetitZen.tech</h1>
-        <p className="tagline">Votre assistant administratif et commercial intelligent</p>
-        <p style={{color: '#666', marginBottom: '2rem'}}>SaaS pour auto-entrepreneurs</p>
-        <button className="button">Commencer gratuitement</button>
-      </div>
-      
-      {/* Bouton chat flottant */}
-      {!showChat && (
-        <button 
-          className="chat-button-floating" 
-          onClick={() => setShowChat(true)}
-          aria-label="Ouvrir le chat"
-        >
-          💬
-        </button>
-      )}
-      
-      {/* Container du chat */}
-      {showChat && (
-        <div className="chat-container">
-          <div className="chat-header">
-            <h3>💬 Chat avec Alex</h3>
-            <button onClick={() => setShowChat(false)} style={{background: 'none', border: 'none', fontSize: '1.5rem', cursor: 'pointer', color: 'white'}}>×</button>
-          </div>
-          <div className="chat-messages">
-            {messages.map(msg => (
-              <div key={msg.id} className={`message ${msg.type}`}>
-                {msg.type === 'bot' && <span className="avatar">🤖</span>}
-                <div className="message-bubble">{msg.text}</div>
-              </div>
-            ))}
-          </div>
-          <div className="chat-input">
-            <input 
-              type="text" 
-              value={inputMessage}
-              onChange={(e) => setInputMessage(e.target.value)}
-              onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-              placeholder="Tape ton message..."
-            />
-            <button onClick={handleSendMessage}>Envoyer</button>
-          </div>
+
+      <div className="kanban-column">
+        <div className="kanban-header processing">
+          <h3>⚙️ En traitement</h3>
+          <span className="count">2</span>
         </div>
-      )}
-    </>
-  );
-}
+        <div className="kanban-card">
+          <h4>Note frais essence</h4>
+          <p>65€ - Déplacement chantier</p>
+          <span className="date">Lun</span>
+        </div>
+      </div>
+
+      <div className="kanban-column">
+        <div className="kanban-header validated">
+          <h3>✅ Validés</h3>
+          <span className="count">5</span>
+        </div>
+        <div className="kanban-card">
+          <h4>Facture Leroy Merlin</h4>
+          <p>234€ - Matériel</p>
+          <span className="date">Mar</span>
+        </div>
+      </div>
+
+      <div className="kanban-column">
+        <div className="kanban-header paid">
+          <h3>💰 Payés</h3>
+          <span className="count">12</span>
+        </div>
+        <div className="kanban-card success">
+          <h4>Facture Garcia</h4>
+          <p>1200€ - Travaux complets</p>
+          <span className="date">Payé ✓</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
