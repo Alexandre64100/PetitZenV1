@@ -1,3 +1,158 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Styles généraux */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #F5F7FA 0%, #C3CEF2 100%);
+  min-height: 100vh;
+  color: #333; /* Couleur de texte par défaut */
+}
+
+/* Styles pour la structure de page (header, main, footer) */
+main {
+  padding: 4rem 2rem; /* Espace autour du contenu principal */
+  max-width: 1200px; /* Limite la largeur du contenu */
+  margin: 0 auto; /* Centre le contenu */
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  border-top: 1px solid #eee;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+
+/* Styles spécifiques à la section Kanban */
+.kanban-section {
+  padding: 4rem 2rem;
+  background-color: #f8faff;
+  margin-top: 2rem; /* Espace au-dessus de la section Kanban */
+}
+
+.kanban-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0; /* Pas de padding supplémentaire ici, déjà géré par main */
+}
+
+.kanban-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.kanban-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.kanban-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #f0f3f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.kanban-column {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.kanban-header {
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.kanban-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.kanban-header .count {
+  background-color: rgba(255,255,255,0.3);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.kanban-header.new {
+  background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%); /* Green */
+}
+
+.kanban-header.processing {
+  background: linear-gradient(135deg, #FFC107 0%, #FFA000 100%); /* Amber */
+}
+
+.kanban-header.validated {
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%); /* Blue */
+}
+
+.kanban-header.paid {
+  background: linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%); /* Purple */
+}
+
+.kanban-card {
+  background-color: #fdfdfd;
+  padding: 1rem;
+  margin: 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.03);
+  border-left: 5px solid #eee; /* Default border */
+}
+
+.kanban-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.kanban-card p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.kanban-card .date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.kanban-card.success { /* For the "Payés" cards */
+  border-left-color: #4CAF50;
+}
