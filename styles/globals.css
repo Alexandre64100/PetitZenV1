@@ -11,8 +11,8 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  /* Fond dégradé avec le bleu Aviron Bayonnais (#00BFFF) */
-  background: linear-gradient(135deg, #F5F7FA 0%, #00BFFF 100%); /* Bleu Aviron Bayonnais */
+  /* Fond dégradé de haut en bas, du blanc vers le bleu très clair (#E0FFFF) */
+  background: linear-gradient(to bottom, #FFFFFF 0%, #E0FFFF 100%); /* Blanc pur vers le bleu très clair */
   min-height: 100vh;
   color: #333; /* Couleur de texte par défaut */
 }
@@ -49,7 +49,7 @@ footer {
 /* Styles spécifiques à la section Kanban */
 .kanban-section {
   padding: 4rem 2rem;
-  background-color: #f8faff;
+  background-color: #f8faff; /* Conserve un fond clair pour cette section */
   margin-top: 2rem; /* Espace au-dessus de la section Kanban */
 }
 
@@ -78,13 +78,13 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   padding: 20px;
-  background-color: #f0f3f7;
+  background-color: #f0f3f7; /* Conserve un fond légèrement grisé pour le tableau */
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .kanban-column {
-  background-color: #ffffff;
+  background-color: #ffffff; /* Conserve un fond blanc pour les colonnes */
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   overflow: hidden;
@@ -167,7 +167,7 @@ footer {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #00BFFF; /* Bleu Aviron Bayonnais */
+  background-color: #00BFFF; /* Bleu vif pour le bouton */
   color: white;
   border: none;
   border-radius: 50%;
@@ -185,7 +185,7 @@ footer {
 
 .chatbot-toggle-button:hover {
   transform: scale(1.05);
-  background-color: #0099CC; /* Nuance légèrement plus foncée pour le hover de #00BFFF */
+  background-color: #0099CC; /* Nuance légèrement plus foncée pour le hover */
 }
 
 /* Styles pour la fenêtre du ChatBot flottante */
@@ -224,7 +224,7 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 1.5rem;
-  background-color: #00BFFF; /* Bleu Aviron Bayonnais */
+  background-color: #00BFFF; /* Bleu vif pour l'en-tête */
   color: white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -274,7 +274,7 @@ footer {
 }
 
 .message.user {
-  background-color: #00BFFF; /* Bleu Aviron Bayonnais */
+  background-color: #00BFFF; /* Bleu vif pour les messages utilisateur */
   color: white;
   margin-left: auto;
   border-bottom-right-radius: 4px;
@@ -316,11 +316,11 @@ footer {
 }
 
 .input-area input:focus {
-  border-color: #00BFFF; /* Bleu Aviron Bayonnais */
+  border-color: #00BFFF; /* Bleu vif pour le focus de l'input */
 }
 
 .input-area button {
-  background-color: #00BFFF; /* Bleu Aviron Bayonnais */
+  background-color: #00BFFF; /* Bleu vif pour le bouton d'envoi */
   color: white;
   border: none;
   padding: 0.8rem 1.5rem;
