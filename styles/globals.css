@@ -214,15 +214,6 @@ h1 {
   transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
-  .chat-container {
-    width: calc(100% - 40px);
-    height: calc(100% - 100px);
-    right: 20px;
-    bottom: 20px;
-  }
-}
-
 /* Kanban Section */
 .kanban-section {
   padding: 4rem 0;
@@ -378,57 +369,15 @@ h1 {
   box-shadow: 0 4px 15px rgba(91, 160, 208, 0.3);
 }
 
-/* Styles pour l'ancien système Kanban si nécessaire */
-.kanban-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.kanban-header h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  color: white;
-}
-
-.kanban-header .count {
-  background: rgba(255,255,255,0.3);
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
-  font-size: 0.9rem;
-  color: white;
-}
-
-.kanban-header.new {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.kanban-header.processing {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-}
-
-.kanban-header.validated {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-}
-
-.kanban-header.paid {
-  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-}
-
-.kanban-card.success {
-  border-left: 4px solid #43e97b;
-}
-
-.kanban-card .date {
-  font-size: 0.8rem;
-  color: #999;
-}
-
+/* Media Queries */
 @media (max-width: 768px) {
+  .chat-container {
+    width: calc(100% - 40px);
+    height: calc(100% - 100px);
+    right: 20px;
+    bottom: 20px;
+  }
+  
   .kanban-board {
     grid-template-columns: 1fr;
     padding: 0 1rem;
