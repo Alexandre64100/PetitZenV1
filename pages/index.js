@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import ChatBot from '../components/ChatBot';
+import ChatBot from '../components/ChatBot'; // Import du ChatBot
+
 export default function Home() {
   return (
     <div>
@@ -9,30 +10,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Section principale avec le Hello World */}
+      {/* Section principale avec le titre et le message de bienvenue */}
       <main>
-       <h1>Bonjour bienvenue chez vous ! 💰</h1>
-<p>Zen+ votre espace administratif gain de temps et d'argent!</p>
+        <h1>Bonjour bienvenue chez vous ! 💰</h1>
+        <p>Zen+ votre espace administratif gain de temps et d'argent!</p>
       </main>
 
-      {/* Nouvelle Section Kanban que tu as fournie */}
+      {/* Section Kanban - TOUT LE CODE DE LA SECTION KANBAN EST ICI */}
       <section className="kanban-section">
-        // ... (code précédent, y compris la section <main>) ...
-
-      {/* Nouvelle Section Kanban que tu as fournie */}
-      <section className="kanban-section">
-        {/* ... TOUT LE CODE DE TA SECTION KANBAN EST ICI ... */}
-      </section>
-
-      {/* C'EST ICI QU'ON AFFICHE LE CHAT BOT ! */}
-      <ChatBot /> {/* <-- Copie-colle cette ligne EXACTEMENT ici ! */}
-
-      <footer>
-        <p>© 2025 PetitZen V2</p>
-      </footer>
-    </div>
-  );
-}
         <div className="container">
           <h2>Gérez vos documents comme un pro ! 📊</h2>
           <p className="kanban-subtitle">Visualisez l'état de vos factures et documents en temps réel</p>
@@ -94,10 +79,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Section Chat Bot - Appelé ici, après le Kanban */}
+      <ChatBot />
+
       <footer>
         <p>© 2025 PetitZen V2</p>
       </footer>
     </div>
   );
 }
-
