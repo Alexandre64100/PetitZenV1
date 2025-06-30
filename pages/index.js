@@ -12,7 +12,7 @@ export default function Home() {
       {/* Section principale avec le Hello World */}
       <main>
        <h1>Bonjour bienvenue chez vous ! 💰</h1>
-<p>Bienvenue dans votre espace administratif !</p>
+<p>Zen+ votre espace administratif gain de temps et d'argent!</p>
       </main>
 
       {/* Nouvelle Section Kanban que tu as fournie */}
